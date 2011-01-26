@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Documentation by YARD 0.6.4</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>PamFaxr</h1>
+
+<p>Ruby library for sending faxes via the <a href="http://pamfax.com">PamFax</a> Simple API.</p>
+
+<h2>Overview</h2>
+
+<p>You may send faxes using the PamFax API. See the <a href="http://www.pamfax.biz/en/extensions/developers/">PamFax Developer</a> page for more details and how to get your developer key.</p>
+
+<h2>Requirements</h2>
+
+<p>Requires these gems, also in the Gemfile:</p>
+
+<pre class="code"><span class='mult op'>*</span> <span class='json identifier id'>json</span>
+<span class='mult op'>*</span> <span class='mime identifier id'>mime</span><span class='minus op'>-</span><span class='types identifier id'>types</span>
+</pre>
+
+<h2>Example</h2>
+
+<pre class="code"><span class='comment val'># Create a new PamFaxr object</span>
+<span class='pamfaxr identifier id'>pamfaxr</span> <span class='assign token'>=</span> <span class='PamFaxr constant id'>PamFaxr</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:base_uri</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'https://sandbox-api.pamfax.biz'</span><span class='comma token'>,</span>
+                      <span class='symbol val'>:key</span>      <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_key'</span><span class='comma token'>,</span> 
+                      <span class='symbol val'>:secret</span>   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_secret'</span><span class='comma token'>,</span> 
+                      <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_username'</span><span class='comma token'>,</span> 
+                      <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_password'</span>
+<span class='comment val'># Create a new FaxJob</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='create_fax_job identifier id'>create_fax_job</span>
+<span class='comment val'># Add the cover sheet</span>
+<span class='covers identifier id'>covers</span> <span class='assign token'>=</span> <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='list_available_covers identifier id'>list_available_covers</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='set_cover identifier id'>set_cover</span><span class='lparen token'>(</span><span class='covers identifier id'>covers</span><span class='lbrack token'>[</span><span class='string val'>'Covers'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'content'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'id'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Foobar is here!'</span><span class='rparen token'>)</span>
+<span class='comment val'># Add files</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_remote_file identifier id'>add_remote_file</span><span class='lparen token'>(</span><span class='string val'>'https://s3.amazonaws.com/pamfax-test/R-intro.pdf'</span><span class='rparen token'>)</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_file identifier id'>add_file</span><span class='lparen token'>(</span><span class='string val'>'examples/R-intro.pdf'</span><span class='rparen token'>)</span>
+<span class='comment val'># Add a recipient</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_recipient identifier id'>add_recipient</span><span class='lparen token'>(</span><span class='string val'>'+14155551212'</span><span class='rparen token'>)</span>
+<span class='comment val'># Loop until the fax is ready to send</span>
+<span class='loop identifier id'>loop</span> <span class='do do kw'>do</span>
+  <span class='fax_state identifier id'>fax_state</span> <span class='assign token'>=</span> <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='get_state identifier id'>get_state</span>
+  <span class='break break kw'>break</span> <span class='if if_mod kw'>if</span> <span class='fax_state identifier id'>fax_state</span><span class='lbrack token'>[</span><span class='string val'>'FaxContainer'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'state'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'ready_to_send'</span>
+  <span class='sleep identifier id'>sleep</span> <span class='integer val'>5</span>
+<span class='end end kw'>end</span>
+<span class='comment val'># Send the fax</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='send_fax identifier id'>send_fax</span>
+</pre>
+</div></div>
+    
+    <div id="footer">
+  Generated on Wed Jan 26 15:14:17 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

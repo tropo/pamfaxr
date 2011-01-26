@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Multipart::FileParam</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Multipart.html" title="Multipart (module)">Multipart</a></span></span>
+     &raquo; 
+    <span class="title">FileParam</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Multipart::FileParam
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Multipart::FileParam</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/pamfaxr/multipart.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Formats the contents of a file or string for inclusion with a multipart
+form post</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#content-instance_method" title="#content (instance method)">- (Object) <strong>content</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute content.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#filename-instance_method" title="#filename (instance method)">- (Object) <strong>filename</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute filename.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#k-instance_method" title="#k (instance method)">- (Object) <strong>k</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute k.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (FileParam) <strong>initialize</strong>(k, filename, content) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FileParam.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_multipart-instance_method" title="#to_multipart (instance method)">- (Object) <strong>to_multipart</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Multipart::FileParam (class)">FileParam</a></span></tt>) <strong>initialize</strong>(k, filename, content) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of FileParam</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/multipart.rb', line 61</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='k identifier id'>k</span><span class='comma token'>,</span> <span class='filename identifier id'>filename</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span>
+  <span class='@k ivar id'>@k</span> <span class='assign token'>=</span> <span class='k identifier id'>k</span>
+  <span class='@filename ivar id'>@filename</span> <span class='assign token'>=</span> <span class='filename identifier id'>filename</span>
+  <span class='@content ivar id'>@content</span> <span class='assign token'>=</span> <span class='content identifier id'>content</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="content=-instance_method"></span>
+      <span id="content-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="content-instance_method">
+  
+    - (<tt>Object</tt>) <strong>content</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute content</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/multipart.rb', line 59</span>
+
+<span class='def def kw'>def</span> <span class='content identifier id'>content</span>
+  <span class='@content ivar id'>@content</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="filename=-instance_method"></span>
+      <span id="filename-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="filename-instance_method">
+  
+    - (<tt>Object</tt>) <strong>filename</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute filename</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/multipart.rb', line 59</span>
+
+<span class='def def kw'>def</span> <span class='filename identifier id'>filename</span>
+  <span class='@filename ivar id'>@filename</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="k=-instance_method"></span>
+      <span id="k-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="k-instance_method">
+  
+    - (<tt>Object</tt>) <strong>k</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute k</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/multipart.rb', line 59</span>
+
+<span class='def def kw'>def</span> <span class='k identifier id'>k</span>
+  <span class='@k ivar id'>@k</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="to_multipart-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_multipart</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/multipart.rb', line 67</span>
+
+<span class='def def kw'>def</span> <span class='to_multipart identifier id'>to_multipart</span>
+  <span class='comment val'># If we can tell the possible mime-type from the filename, use the</span>
+  <span class='comment val'># first in the list; otherwise, use &quot;application/octet-stream&quot;</span>
+  <span class='mime_type identifier id'>mime_type</span> <span class='assign token'>=</span> <span class='MIME constant id'>MIME</span><span class='colon2 op'>::</span><span class='Types constant id'>Types</span><span class='dot token'>.</span><span class='type_for identifier id'>type_for</span><span class='lparen token'>(</span><span class='filename identifier id'>filename</span><span class='rparen token'>)</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='MIME constant id'>MIME</span><span class='colon2 op'>::</span><span class='Types constant id'>Types</span><span class='lbrack token'>[</span><span class='string val'>&quot;application/octet-stream&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+  <span class='return return kw'>return</span> <span class='dstring node'>&quot;Content-Disposition: form-data; name=\&quot;#{CGI::escape(k)}\&quot;; filename=\&quot;#{ filename }\&quot;\r\n&quot;</span> <span class='plus op'>+</span>
+         <span class='dstring node'>&quot;Content-Type: #{ mime_type.simplified }\r\n\r\n#{ content }\r\n&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Jan 26 15:14:18 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

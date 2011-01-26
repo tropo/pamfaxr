@@ -1,0 +1,2735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: PamFaxr::FaxJob</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../PamFaxr.html" title="PamFaxr (class)">PamFaxr</a></span></span>
+     &raquo; 
+    <span class="title">FaxJob</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: PamFaxr::FaxJob
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PamFaxr::FaxJob</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/pamfaxr/pamfaxr.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_file-instance_method" title="#add_file (instance method)">- (Hash) <strong>add_file</strong>(filename) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a local file to the fax job.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_recipient-instance_method" title="#add_recipient (instance method)">- (Hash) <strong>add_recipient</strong>(number) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a recipient to a fax job.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_remote_file-instance_method" title="#add_remote_file (instance method)">- (Hash) <strong>add_remote_file</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a remote file to the fax job.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel-instance_method" title="#cancel (instance method)">- (Hash) <strong>cancel</strong>(uuid) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Cancel an outstanding fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clone_fax-instance_method" title="#clone_fax (instance method)">- (Hash) <strong>clone_fax</strong>(uuid) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clone a fax job.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_fax_job-instance_method" title="#create_fax_job (instance method)">- (Hash) <strong>create_fax_job</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new fax job.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_preview-instance_method" title="#get_preview (instance method)">- (Hash) <strong>get_preview</strong>(uuid) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the preview of the pages.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_state-instance_method" title="#get_state (instance method)">- (Hash) <strong>get_state</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Obtains the state of the FaxJob build, may block or return immediately.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instantiates the FaxJob class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#list_available_covers-instance_method" title="#list_available_covers (instance method)">- (Array) <strong>list_available_covers</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the available cover templates.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#list_fax_files-instance_method" title="#list_fax_files (instance method)">- (Array) <strong>list_fax_files</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the files associated to the current faxjob.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#list_recipients-instance_method" title="#list_recipients (instance method)">- (Array) <strong>list_recipients</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the recipients associated to the current faxjob.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">- (Object) <strong>method_missing</strong>(method, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Captures any unknown methods gracefully by throwing a Runtime Error.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_all_files-instance_method" title="#remove_all_files (instance method)">- (Hash) <strong>remove_all_files</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove all of the files associated to a fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_all_recipients-instance_method" title="#remove_all_recipients (instance method)">- (Hash) <strong>remove_all_recipients</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove all of the recipients associated to a fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_cover-instance_method" title="#remove_cover (instance method)">- (Hash) <strong>remove_cover</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove all the cover page for the associated fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_file-instance_method" title="#remove_file (instance method)">- (Hash) <strong>remove_file</strong>(file_uuid) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a particular file associated to a fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_recipient-instance_method" title="#remove_recipient (instance method)">- (Hash) <strong>remove_recipient</strong>(recipient_uuid) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a particular recipient associated to a fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_fax-instance_method" title="#send_fax (instance method)">- (Hash) <strong>send_fax</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Request to send the built fax.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_fax_later-instance_method" title="#send_fax_later (instance method)">- (Hash) <strong>send_fax_later</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Request to send the built fax later.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_cover-instance_method" title="#set_cover (instance method)">- (Hash) <strong>set_cover</strong>(template_id, text) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the current fax cover sheet.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt>Object</tt>) <strong>initialize</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Instantiates the FaxJob class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the options for instantiating a FaxJob class</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 12</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='@base_resource ivar id'>@base_resource</span>   <span class='assign token'>=</span> <span class='string val'>'/FaxJob'</span>
+  <span class='@api_credentials ivar id'>@api_credentials</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:api_credentials</span><span class='rbrack token'>]</span>
+  <span class='@http ivar id'>@http</span>            <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:http</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <p class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>method_missing</strong>(method, *args) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Captures any unknown methods gracefully by throwing a Runtime Error</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>RuntimeError</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+666
+667
+668</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 666</span>
+
+<span class='def def kw'>def</span> <span class='method_missing identifier id'>method_missing</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='rparen token'>)</span>
+  <span class='raise identifier id'>raise</span> <span class='RuntimeError constant id'>RuntimeError</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Unknown method #{method}&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="add_file-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>add_file</strong>(filename) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds a local file to the fax job</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>adding a local file</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_file identifier id'>add_file</span><span class='lparen token'>(</span><span class='string val'>'/path_to_my_file/filename.pdf'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+            <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;FaxContainerFile&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+            <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;/path_to_my_file/filename.pdf&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;file_order&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+             <span class='string val'>&quot;ext&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;pdf&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;file_uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;JNMi19AeQ6QkoC&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;mime&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;application/pdf&quot;</span><span class='comma token'>,</span>
+           <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>string</tt>, <tt>Required</tt>)</span>
+      
+      
+        <span class='name'>filename</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>to add to the fax including full path</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the request to add a file</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 122</span>
+
+<span class='def def kw'>def</span> <span class='add_file identifier id'>add_file</span><span class='lparen token'>(</span><span class='filename identifier id'>filename</span><span class='rparen token'>)</span>
+  <span class='data identifier id'>data</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span> <span class='assign token'>=</span> <span class='Multipart constant id'>Multipart</span><span class='colon2 op'>::</span><span class='Post constant id'>Post</span><span class='dot token'>.</span><span class='prepare_query identifier id'>prepare_query</span><span class='lparen token'>(</span><span class='lbrace token'>{</span> <span class='string val'>'filename'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='filename identifier id'>filename</span><span class='comma token'>,</span> <span class='string val'>'file'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='File constant id'>File</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='filename identifier id'>filename</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/AddFile&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span>
+  <span class='post identifier id'>post</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='comma token'>,</span> <span class='data identifier id'>data</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="add_recipient-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>add_recipient</strong>(number) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds a recipient to a fax job</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>adding a recipient</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_recipient identifier id'>add_recipient</span><span class='lparen token'>(</span><span class='string val'>'14155551212'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+        <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;FaxRecipient&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+      <span class='string val'>&quot;price_per_page&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='integer val'>.09</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;number&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;+14155551212&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;price_source&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;PNR&quot;</span><span class='comma token'>,</span>
+             <span class='string val'>&quot;country&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;US&quot;</span><span class='comma token'>,</span>
+           <span class='string val'>&quot;area_code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;415&quot;</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;zone&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;number_type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;FIXED&quot;</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;California (CA)&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>the</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>phone number to add to the fax job</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the add recipient request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 90</span>
+
+<span class='def def kw'>def</span> <span class='add_recipient identifier id'>add_recipient</span><span class='lparen token'>(</span><span class='number identifier id'>number</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/AddRecipient&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;number=#{number}&quot;</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="add_remote_file-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>add_remote_file</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds a remote file to the fax job</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>adding a remote file</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_remote_file identifier id'>add_remote_file</span><span class='lparen token'>(</span><span class='string val'>'https://s3.amazonaws.com/pamfax-test/R-intro.pdf'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+            <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;FaxContainerFile&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+            <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;R-intro.pdf&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;file_order&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+             <span class='string val'>&quot;ext&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;pdf&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;file_uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;CwPx31xjl9k7Cp&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;mime&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;application/pdf&quot;</span><span class='comma token'>,</span>
+           <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the file to send with the fax, http basic auth is optional</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the request to add a file</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 155</span>
+
+<span class='def def kw'>def</span> <span class='add_remote_file identifier id'>add_remote_file</span><span class='lparen token'>(</span><span class='url identifier id'>url</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/AddRemoteFile&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;url=#{url}&quot;</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cancel-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>cancel</strong>(uuid) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Cancel an outstanding fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>cancel a fax</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='cancel identifier id'>cancel</span><span class='lparen token'>(</span><span class='string val'>'ebKVV4XGwx99Wu'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to cancel</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the request to cancel an outstanding fax</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 179</span>
+
+<span class='def def kw'>def</span> <span class='cancel identifier id'>cancel</span><span class='lparen token'>(</span><span class='uuid identifier id'>uuid</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/Cancel&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;uuid=#{uuid}&quot;</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clone_fax-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>clone_fax</strong>(uuid) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Clone a fax job</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>cloning a sent fax</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='clone_fax identifier id'>clone_fax</span><span class='lparen token'>(</span><span class='string val'>'ebKVV4XGwx99Wu'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;fax_not_found&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Fax not found&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to clone</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the request to clone an outstanding fax</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 203</span>
+
+<span class='def def kw'>def</span> <span class='clone_fax identifier id'>clone_fax</span><span class='lparen token'>(</span><span class='uuid identifier id'>uuid</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/CloneFax&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;user_ip=#{Socket.gethostname}&amp;user_agent=pamfax.rb&amp;uuid=#{uuid}&quot;</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="create_fax_job-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>create_fax_job</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new fax job</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='create_fax_job identifier id'>create_fax_job</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+        <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;FaxContainer&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+                   <span class='string val'>&quot;price&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;send_mail&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ebKVV4XGwx99Wu&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;error_notification&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;group_notification&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;send_sms&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+           <span class='string val'>&quot;currency_rate&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;cover_page_length&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;send_chat&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;pages&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;cover_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;currency&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;affiliatepartner&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;updated&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;cover_text&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;processing_started&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;created&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:27:57&quot;</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;editing&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the fax job creation request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 55</span>
+
+<span class='def def kw'>def</span> <span class='create_fax_job identifier id'>create_fax_job</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/Create&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;user_ip=#{Socket.gethostname}&amp;user_agent=pamfax.rb&amp;origin=script&quot;</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_preview-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_preview</strong>(uuid) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the preview of the pages</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>get a preview of the fax pages</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='get_preview identifier id'>get_preview</span><span class='lparen token'>(</span><span class='string val'>'ebKVV4XGwx99Wu'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+        <span class='string val'>&quot;Status&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+      <span class='string val'>&quot;open&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>5</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;done&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>2</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;PreviewPages&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+      <span class='string val'>&quot;type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;list&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to get the preview for</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the preview request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+506
+507
+508
+509</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 506</span>
+
+<span class='def def kw'>def</span> <span class='get_preview identifier id'>get_preview</span><span class='lparen token'>(</span><span class='uuid identifier id'>uuid</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/GetPreview&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;uuid=#{uuid}&quot;</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_state-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_state</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Obtains the state of the FaxJob build, may block or return immediately</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>get the state of the fax</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='get_state identifier id'>get_state</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+        <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>2</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;converting&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;Files&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;list&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;content&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+          <span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='lbrace token'>{</span>
+              <span class='string val'>&quot;file_order&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;converted&quot;</span>
+          <span class='rbrace token'>}</span>
+      <span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;FaxContainer&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+                   <span class='string val'>&quot;price&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>18.36</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;sms_cost&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;send_mail&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ebKVV4XGwx99Wu&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;error_notification&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;group_notification&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;send_sms&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+           <span class='string val'>&quot;currency_rate&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;cover_page_length&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;send_chat&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;pages&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>102</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;cover_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;currency&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;affiliatepartner&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;updated&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:28:22&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;cover_text&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Foobar is here!&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;processing_started&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;created&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:27:57&quot;</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ready_to_send&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the options for obtaining the fax state</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the status request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 466</span>
+
+<span class='def def kw'>def</span> <span class='get_state identifier id'>get_state</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='if if kw'>if</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:blocking</span><span class='rbrack token'>]</span>
+    <span class='state identifier id'>state</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+    <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+    <span class='while while kw'>while</span> <span class='state identifier id'>state</span> <span class='eq op'>==</span> <span class='nil nil kw'>nil</span>
+      <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='fetch_state identifier id'>fetch_state</span>
+      <span class='sleep identifier id'>sleep</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:interval</span><span class='rbrack token'>]</span>
+    <span class='end end kw'>end</span>
+    <span class='result identifier id'>result</span>
+  <span class='else else kw'>else</span>
+    <span class='fetch_state identifier id'>fetch_state</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="list_available_covers-instance_method">
+  
+    - (<tt>Array</tt>) <strong>list_available_covers</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the available cover templates</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>list available fax covers</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='list_available_covers identifier id'>list_available_covers</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;Covers&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;list&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;content&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+          <span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='lbrace token'>{</span>
+              <span class='string val'>&quot;template_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;eae27d77ca20db309e056e3d2dcd7d69&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;title&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Basic&quot;</span><span class='comma token'>,</span>
+                  <span class='string val'>&quot;creator&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                       <span class='string val'>&quot;id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;thumb_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;091d584fced301b442654dd8c23b3fc9&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;preview_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;7eabe3a1649ffa2b3ff8c02ebfd5659f&quot;</span>
+          <span class='rbrace token'>}</span><span class='comma token'>,</span>
+          <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='lbrace token'>{</span>
+              <span class='string val'>&quot;template_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ca46c1b9512a7a8315fa3c5a946e8265&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;title&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Flowers&quot;</span><span class='comma token'>,</span>
+                  <span class='string val'>&quot;creator&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                       <span class='string val'>&quot;id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;thumb_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;45fbc6d3e05ebd93369ce542e8f2322d&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;preview_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;979d472a84804b9f647bc185a877a8b5&quot;</span>
+          <span class='rbrace token'>}</span><span class='comma token'>,</span>
+          <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span> <span class='lbrace token'>{</span>
+              <span class='string val'>&quot;template_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;e96ed478dab8595a7dbda4cbcbee168f&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;title&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Message&quot;</span><span class='comma token'>,</span>
+                  <span class='string val'>&quot;creator&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                       <span class='string val'>&quot;id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>4</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;thumb_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ec8ce6abb3e952a85b8551ba726a1227&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;preview_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;63dc7ed1010d3c3b8269faf0ba7491d4&quot;</span>
+          <span class='rbrace token'>}</span><span class='comma token'>,</span>
+          <span class='lbrack token'>[</span><span class='integer val'>3</span><span class='rbrack token'>]</span> <span class='lbrace token'>{</span>
+              <span class='string val'>&quot;template_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;f340f1b1f65b6df5b5e3f94d95b11daf&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;title&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Simple&quot;</span><span class='comma token'>,</span>
+                  <span class='string val'>&quot;creator&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                       <span class='string val'>&quot;id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>5</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;thumb_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;335f5352088d7d9bf74191e006d8e24c&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;preview_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;cb70ab375662576bd1ac5aaf16b3fca4&quot;</span>
+          <span class='rbrace token'>}</span>
+      <span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an array of hashes of the available covers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268
+269</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 266</span>
+
+<span class='def def kw'>def</span> <span class='list_available_covers identifier id'>list_available_covers</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/ListAvailableCovers&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="list_fax_files-instance_method">
+  
+    - (<tt>Array</tt>) <strong>list_fax_files</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the files associated to the current faxjob</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>listing fax files associated to a job</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='list_fax_files identifier id'>list_fax_files</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+   <span class='string val'>&quot;Files&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;list&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;content&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+          <span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='lbrace token'>{</span>
+                    <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;R-intro.pdf&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>646768</span><span class='comma token'>,</span>
+               <span class='string val'>&quot;extension&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;pdf&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;CwPx31xjl9k7Cp&quot;</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;pages&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>101</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;contentmd5&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;fd898b168b9780212a2ddd5bfbd79d65&quot;</span><span class='comma token'>,</span>
+                <span class='string val'>&quot;mimetype&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;application/pdf&quot;</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;created&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:28:05&quot;</span>
+          <span class='rbrace token'>}</span>
+      <span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an array of hashes of the associated files</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+303
+304
+305
+306</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 303</span>
+
+<span class='def def kw'>def</span> <span class='list_fax_files identifier id'>list_fax_files</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/ListFaxFiles&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="list_recipients-instance_method">
+  
+    - (<tt>Array</tt>) <strong>list_recipients</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the recipients associated to the current faxjob</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>listing recipients on a fax job</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='list_recipients identifier id'>list_recipients</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+      <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>&quot;Recipients&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;list&quot;</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;content&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+              <span class='lbrace token'>{</span>
+                            <span class='string val'>&quot;price&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                         <span class='string val'>&quot;duration&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;delivery_started&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;price_per_page&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='integer val'>.09</span><span class='comma token'>,</span>
+                           <span class='string val'>&quot;number&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;+13035551212&quot;</span><span class='comma token'>,</span>
+                     <span class='string val'>&quot;price_source&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;PNR&quot;</span><span class='comma token'>,</span>
+                          <span class='string val'>&quot;country&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;US&quot;</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;sent&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                        <span class='string val'>&quot;completed&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                        <span class='string val'>&quot;area_code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;303&quot;</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;formatted_number&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;+1 303 5551212&quot;</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;zone&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ExozS0NJe7CErm&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;currency_rate&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+                            <span class='string val'>&quot;pages&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                      <span class='string val'>&quot;status_code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                      <span class='string val'>&quot;number_type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;FIXED&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;transmission_report&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+                         <span class='string val'>&quot;currency&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+                      <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Colorado (CO)&quot;</span><span class='comma token'>,</span>
+                          <span class='string val'>&quot;updated&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:28:16&quot;</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;status_message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                          <span class='string val'>&quot;created&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:28:16&quot;</span><span class='comma token'>,</span>
+                            <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;unknown&quot;</span>
+          <span class='rbrace token'>}</span><span class='comma token'>,</span>
+              <span class='lbrace token'>{</span>
+                            <span class='string val'>&quot;price&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                         <span class='string val'>&quot;duration&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;delivery_started&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;price_per_page&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='integer val'>.09</span><span class='comma token'>,</span>
+                           <span class='string val'>&quot;number&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;+14155551212&quot;</span><span class='comma token'>,</span>
+                     <span class='string val'>&quot;price_source&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;PNR&quot;</span><span class='comma token'>,</span>
+                          <span class='string val'>&quot;country&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;US&quot;</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;sent&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                        <span class='string val'>&quot;completed&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                        <span class='string val'>&quot;area_code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;415&quot;</span><span class='comma token'>,</span>
+                 <span class='string val'>&quot;formatted_number&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;+1 415 5551212&quot;</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;zone&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+                             <span class='string val'>&quot;uuid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;yoAT88QXAda80g&quot;</span><span class='comma token'>,</span>
+                    <span class='string val'>&quot;currency_rate&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+                            <span class='string val'>&quot;pages&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                      <span class='string val'>&quot;status_code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+                      <span class='string val'>&quot;number_type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;FIXED&quot;</span><span class='comma token'>,</span>
+              <span class='string val'>&quot;transmission_report&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+                         <span class='string val'>&quot;currency&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span>
+                      <span class='string val'>&quot;description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;California (CA)&quot;</span><span class='comma token'>,</span>
+                          <span class='string val'>&quot;updated&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:28:14&quot;</span><span class='comma token'>,</span>
+                   <span class='string val'>&quot;status_message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+                          <span class='string val'>&quot;created&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2011-01-17 19:28:14&quot;</span><span class='comma token'>,</span>
+                            <span class='string val'>&quot;state&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;unknown&quot;</span>
+          <span class='rbrace token'>}</span>
+      <span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an array of hashes of recipients</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+384
+385
+386
+387</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 384</span>
+
+<span class='def def kw'>def</span> <span class='list_recipients identifier id'>list_recipients</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/ListRecipients&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="remove_all_files-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>remove_all_files</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove all of the files associated to a fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>remove all files</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='remove_all_files identifier id'>remove_all_files</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+   <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+          <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+   <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to remove all the files for</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the remove request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+530
+531
+532
+533</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 530</span>
+
+<span class='def def kw'>def</span> <span class='remove_all_files identifier id'>remove_all_files</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/RemoveAllFiles&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="remove_all_recipients-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>remove_all_recipients</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove all of the recipients associated to a fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>remove all recipients</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='remove_all_recipients identifier id'>remove_all_recipients</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+   <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+          <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+   <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to remove all the recipients for</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the remove request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+554
+555
+556
+557</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 554</span>
+
+<span class='def def kw'>def</span> <span class='remove_all_recipients identifier id'>remove_all_recipients</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/RemoveAllRecipients&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="remove_cover-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>remove_cover</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove all the cover page for the associated fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>remove cover</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='remove_cover identifier id'>remove_cover</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+   <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+          <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+   <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to remove the cover page for</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the remove request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+578
+579
+580
+581</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 578</span>
+
+<span class='def def kw'>def</span> <span class='remove_cover identifier id'>remove_cover</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/RemoveCover&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="remove_file-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>remove_file</strong>(file_uuid) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a particular file associated to a fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>remove file</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='remove_file identifier id'>remove_file</span><span class='lparen token'>(</span><span class='string val'>'JNMi19AeQ6QkoC'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+   <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+          <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+         <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+   <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to remove the particular file for</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the remove request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+602
+603
+604
+605</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 602</span>
+
+<span class='def def kw'>def</span> <span class='remove_file identifier id'>remove_file</span><span class='lparen token'>(</span><span class='file_uuid identifier id'>file_uuid</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/RemoveFile&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;file_uuid=#{file_uuid}&quot;</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="remove_recipient-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>remove_recipient</strong>(recipient_uuid) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a particular recipient associated to a fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>TBD</p>
+</div></h4>
+      <pre class="example code">
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>required</tt>, <tt>String</tt>)</span>
+      
+      
+        <span class='name'>uuid</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of the fax to remove a particular recipients for</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the remove request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+615
+616
+617
+618</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 615</span>
+
+<span class='def def kw'>def</span> <span class='remove_recipient identifier id'>remove_recipient</span><span class='lparen token'>(</span><span class='recipient_uuid identifier id'>recipient_uuid</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/RemoveRecipient&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;uuid=#{uuid}&quot;</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="send_fax-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>send_fax</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Request to send the built fax</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>send a fax</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='send_fax identifier id'>send_fax</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;not_enough_credit&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;You don't have enough PamFax Credit. &lt;a href=\\\&quot;https://www.pamfax.biz/shop\\\&quot;&gt;Buy PamFax Credit now&lt;/a&gt;.&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the request to send the built fax</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+637
+638
+639
+640</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 637</span>
+
+<span class='def def kw'>def</span> <span class='send_fax identifier id'>send_fax</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/Send&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="send_fax_later-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>send_fax_later</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Request to send the built fax later</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='send_fax_later identifier id'>send_fax_later</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>    
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the request to send the built fax later</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+659
+660
+661
+662</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 659</span>
+
+<span class='def def kw'>def</span> <span class='send_fax_later identifier id'>send_fax_later</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/SendLater&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="set_cover-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>set_cover</strong>(template_id, text) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the current fax cover sheet</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>set the cover for the fax</p>
+</div></h4>
+      <pre class="example code"><span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='set_cover identifier id'>set_cover</span><span class='lparen token'>(</span><span class='string val'>'3'</span><span class='comma token'>,</span> <span class='string val'>'Foobar is here!'</span><span class='rparen token'>)</span>
+
+<span class='returns identifier id'>returns</span><span class='colon op'>:</span>
+
+<span class='lbrace token'>{</span>
+  <span class='string val'>&quot;result&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+         <span class='string val'>&quot;code&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;success&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;count&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+      <span class='string val'>&quot;message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>the</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>template ID to use</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>the</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>text to use in the template</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the result of the set fax cover request</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+409
+410
+411
+412</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 409</span>
+
+<span class='def def kw'>def</span> <span class='set_cover identifier id'>set_cover</span><span class='lparen token'>(</span><span class='template_id identifier id'>template_id</span><span class='comma token'>,</span> <span class='text identifier id'>text</span><span class='rparen token'>)</span>
+  <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='encode identifier id'>encode</span><span class='lparen token'>(</span><span class='@base_resource ivar id'>@base_resource</span> <span class='plus op'>+</span> <span class='string val'>&quot;/SetCover&quot;</span> <span class='plus op'>+</span> <span class='@api_credentials ivar id'>@api_credentials</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;template_id=#{template_id}&amp;text=#{text}&quot;</span><span class='rparen token'>)</span>
+  <span class='get identifier id'>get</span><span class='lparen token'>(</span><span class='resource identifier id'>resource</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Jan 26 15:14:18 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
