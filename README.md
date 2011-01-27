@@ -1,12 +1,12 @@
 PamFaxr
 =======
 
-Ruby library for sending faxes via the [PamFax](http://pamfax.com) Simple API.
+Ruby library for sending faxes via the [PamFax](http://www.pamfax.biz/en/partners/tropo/) Simple API.
 
 Overview
 --------
 
-You may send faxes using the PamFax API. See the [PamFax Developer](http://www.pamfax.biz/en/extensions/developers/) page for more details and how to get your developer key.
+You may send faxes using the PamFax API. See the [PamFax Developer](http://www.pamfax.biz/en/partners/tropo/) page for more details and how to get your developer key.
 
 Requirements
 ------------
