@@ -2,11 +2,11 @@ require 'rubygems'
 require 'lib/pamfaxr'
 require 'awesome_print'
 
-PAMFAX_URI      = 'https://sandbox-api.pamfax.biz'
-PAMFAX_KEY      = 'your_key'
-PAMFAX_SECRET   = 'your_secret'
-PAMFAX_USERNAME = 'your_username'
-PAMFAX_PASSWORD = 'your_password'
+PAMFAX_URI      = 'https://api.pamfax.biz/'
+PAMFAX_KEY      = 'uname'
+PAMFAX_SECRET   = 'pass'
+PAMFAX_USERNAME = 'uname'
+PAMFAX_PASSWORD = 'pass'
 
 pamfaxr = PamFaxr.new :base_uri => PAMFAX_URI,
                       :key      => PAMFAX_KEY, 
@@ -31,11 +31,11 @@ ap pamfaxr.set_cover(covers['Covers']['content'][1]['id'], 'Foobar is here!')
 
 ap 'Adding a remote file'
 ap '*'*10
-ap pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/R-intro.pdf')
+ap pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/Tropo.pdf')
 
 ap 'Adding a local file'
 ap '*'*10
-file = pamfaxr.add_file('examples/R-intro.pdf')
+file = pamfaxr.add_file('examples/Tropo.pdf')
 ap file
 
 ap 'Removing a file'

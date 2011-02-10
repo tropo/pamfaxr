@@ -1,6 +1,6 @@
 class PamFaxr
   class FaxJob
-    require 'awesome_print'
+
     ##
     # Instantiates the FaxJob class
     #
@@ -699,7 +699,8 @@ class PamFaxr
     # @return [Hash] the result of the request
     def get(resource)
       begin
-        JSON.parse @http.get(resource, { 'Content-Type' => 'application/json' }).body
+        body = @http.get(resource, { 'Content-Type' => 'application/json' }).body
+        JSON.parse body
       rescue => error
       end
     end
@@ -782,7 +783,13 @@ class PamFaxr
   # @return [Object] the instantiated FaxJob class
   def verify_user(options={})
     resource = "/Session/VerifyUser/#{options[:api_credentials]}&username=#{options[:username]}&password=#{options[:password]}"
-    JSON.parse options[:http].get(resource).body 
+    body = options[:http].get(resource).body 
+    begin
+      JSON.parse body
+    rescue => error
+      p error
+      p body
+    end
   end
   
   ##
@@ -792,6 +799,7 @@ class PamFaxr
   #
   # @return [Object] an instantiated net/http object that is ssl enabled
   def create_http(base_uri)
+    p base_uri
     http = Net::HTTP.new(base_uri.host, base_uri.port)
     http.use_ssl = true
     http

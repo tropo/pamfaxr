@@ -20,8 +20,7 @@ Example
 -------
 
     # Create a new PamFaxr object
-	pamfaxr = PamFaxr.new :base_uri => 'https://sandbox-api.pamfax.biz',
-	                      :key      => 'your_api_key', 
+	pamfaxr = PamFaxr.new :key      => 'your_api_key', 
 	                      :secret   => 'your_api_secret', 
 	                      :username => 'your_username', 
 	                      :password => 'your_password'
@@ -31,8 +30,8 @@ Example
 	covers = pamfaxr.list_available_covers
 	pamfaxr.set_cover(covers['Covers']['content'][1]['id'], 'Foobar is here!')
 	# Add files
-	pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/R-intro.pdf')
-	pamfaxr.add_file('examples/R-intro.pdf')
+	pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/Tropo.pdf')
+	pamfaxr.add_file('examples/Tropo.pdf')
 	# Add a recipient
 	pamfaxr.add_recipient('+14155551212')
 	# Loop until the fax is ready to send
