@@ -726,11 +726,11 @@ class PamFaxr
   # Creates an instance of the PamFax class
   #
   # @param [Hash] params the options for instantiating a PamFax class
-  # @option params [optionsl, String] :base_uri the URI of the PamFax API, it defaults to https://api.pamfax.biz
-  # @option params [String] :api_key the PamFax API key you have been assigned
-  # @option params [String] :api_secret the PamFax API secret you have been assigned
   # @option params [String] :username the PamFax username you are going to use to send faxes
   # @option params [String] :password the PamFax password you are going to use to send faxes
+  # @option params [optionsl, String] :base_uri the URI of the PamFax API, it defaults to https://api.pamfax.biz
+  # @option params [optional, String] :api_key the PamFax API key you have been assigned
+  # @option params [optional, String] :api_secret the PamFax API secret you have been assigned
   #
   # @return [Object] the instantiated FaxJob class
   #
