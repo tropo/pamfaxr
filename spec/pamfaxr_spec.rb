@@ -1,10 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-PAMFAX_URI      = 'https://sandbox-api.pamfax.biz'
-PAMFAX_KEY      = 'name'
-PAMFAX_SECRET   = 'abd123'
-PAMFAX_USERNAME = 'fooey'
-PAMFAX_PASSWORD = 'foobar'
+PAMFAX_URI        = 'https://sandbox-api.pamfax.biz'
+PAMFAX_API_KEY    = 'name'
+PAMFAX_API_SECRET = 'abd123'
+PAMFAX_USERNAME   = 'fooey'
+PAMFAX_PASSWORD   = 'foobar'
 
 FakeWeb.allow_net_connect = false
 
@@ -308,9 +308,13 @@ describe "PamFaxr" do
                         }
                     }
 
-    # Addresses
     FakeWeb.register_uri(:get, 
-                         "https://sandbox-api.pamfax.biz/Session/VerifyUser/?apikey=#{PAMFAX_KEY}&apisecret=#{PAMFAX_SECRET}&apioutputformat=API_FORMAT_JSON&username=#{PAMFAX_USERNAME}&password=#{PAMFAX_PASSWORD}", 
+                         "https://sandbox-api.pamfax.biz/Session/VerifyUser/?apikey=#{PAMFAX_API_KEY}&apisecret=#{PAMFAX_API_SECRET}&apioutputformat=API_FORMAT_JSON&username=#{PAMFAX_USERNAME}&password=#{PAMFAX_PASSWORD}", 
+                         :body => @user_found.to_json, 
+                         :content_type => "application/json")
+
+    FakeWeb.register_uri(:get, 
+                         "https://api.pamfax.biz/Session/VerifyUser/?apikey=tropo_developer&apisecret=7xGi0xAqcg3YXw&apioutputformat=API_FORMAT_JSON&username=fooey&password=looey", 
                          :body => @user_found.to_json, 
                          :content_type => "application/json")
 
@@ -399,11 +403,11 @@ describe "PamFaxr" do
                           :status => ["200", "OK"])
                                                                           
     # Our testing URI
-    @pamfaxr = PamFaxr.new :base_uri => PAMFAX_URI,
-                           :key      => PAMFAX_KEY, 
-                           :secret   => PAMFAX_SECRET, 
-                           :username => PAMFAX_USERNAME, 
-                           :password => PAMFAX_PASSWORD
+    @pamfaxr = PamFaxr.new :base_uri     => PAMFAX_URI,
+                           :api_key      => PAMFAX_API_KEY, 
+                           :api_secret   => PAMFAX_API_SECRET, 
+                           :username     => PAMFAX_USERNAME, 
+                           :password     => PAMFAX_PASSWORD
 
   end
   
@@ -411,13 +415,19 @@ describe "PamFaxr" do
     @pamfaxr.instance_of?(PamFaxr).should == true
   end
   
+  it "should create an instance of PamFax without the base_uri, api_key or api_secret included" do
+    pamfaxr = PamFaxr.new :username     => 'fooey', 
+                          :password     => 'looey'
+    pamfaxr.instance_of?(PamFaxr).should == true
+  end
+  
   it "should get an error if invalid user details are requested" do
     begin
-      pamfax = PamFaxr.new :base_uri => PAMFAX_URI,
-                           :key      => 'tropo', 
-                           :secret   => 'abc123', 
-                           :username => 'fooey', 
-                           :password => 'looey'
+      pamfax = PamFaxr.new :base_uri     => PAMFAX_URI,
+                           :api_key      => 'tropo', 
+                           :api_secret   => 'abc123', 
+                           :username     => 'fooey', 
+                           :password     => 'looey'
     rescue => e
       e.to_s.should == "Unknown user name or incorrect password"
     end

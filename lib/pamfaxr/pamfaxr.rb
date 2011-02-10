@@ -727,8 +727,8 @@ class PamFaxr
   #
   # @param [Hash] params the options for instantiating a PamFax class
   # @option params [optionsl, String] :base_uri the URI of the PamFax API, it defaults to https://api.pamfax.biz
-  # @option params [String] :key the PamFax API key you have been assigned
-  # @option params [String] :secret the PamFax API secret you have been assigned
+  # @option params [String] :api_key the PamFax API key you have been assigned
+  # @option params [String] :api_secret the PamFax API secret you have been assigned
   # @option params [String] :username the PamFax username you are going to use to send faxes
   # @option params [String] :password the PamFax password you are going to use to send faxes
   #
@@ -737,10 +737,12 @@ class PamFaxr
   # @example create a new PamFax object
   #   pamfaxr = PamFax.new({ :key => 'your_api_key', :secret => 'your_api_secret' })
   def initialize(options={})
-    base_uri = options[:base_uri] || "https://api.pamfax.biz"
+    base_uri   = options[:base_uri]   || "https://api.pamfax.biz"
+    api_key    = options[:api_key]    || "tropo_developer"
+    api_secret = options[:api_secret] || "7xGi0xAqcg3YXw"
     
     options.merge!({ :http            => create_http(URI.parse(base_uri)),
-                     :api_credentials => "?apikey=#{options[:key]}&apisecret=#{options[:secret]}&apioutputformat=API_FORMAT_JSON" })
+                     :api_credentials => "?apikey=#{api_key}&apisecret=#{api_secret}&apioutputformat=API_FORMAT_JSON" })
     options[:api_credentials] = options[:api_credentials] + "&usertoken=#{get_user_token(options)}"
     
     @fax_job = FaxJob.new options

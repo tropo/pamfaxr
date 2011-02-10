@@ -3,14 +3,11 @@ require 'lib/pamfaxr'
 require 'awesome_print'
 
 PAMFAX_URI      = 'https://api.pamfax.biz/'
-PAMFAX_KEY      = 'uname'
-PAMFAX_SECRET   = 'pass'
-PAMFAX_USERNAME = 'uname'
-PAMFAX_PASSWORD = 'pass'
+PAMFAX_USERNAME = 'username'
+PAMFAX_PASSWORD = 'password'
 
+# You may also specificy a custom :api_key and :api_secret, or it uses the default
 pamfaxr = PamFaxr.new :base_uri => PAMFAX_URI,
-                      :key      => PAMFAX_KEY, 
-                      :secret   => PAMFAX_SECRET, 
                       :username => PAMFAX_USERNAME, 
                       :password => PAMFAX_PASSWORD
 
