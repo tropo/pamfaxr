@@ -290,16 +290,20 @@ FaxJob object.</p>
 744
 745
 746
-747</pre>
+747
+748
+749</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 739</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
-  <span class='base_uri identifier id'>base_uri</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:base_uri</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='string val'>&quot;https://api.pamfax.biz&quot;</span>
+  <span class='base_uri identifier id'>base_uri</span>   <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:base_uri</span><span class='rbrack token'>]</span>   <span class='orop op'>||</span> <span class='string val'>&quot;https://api.pamfax.biz&quot;</span>
+  <span class='api_key identifier id'>api_key</span>    <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:api_key</span><span class='rbrack token'>]</span>    <span class='orop op'>||</span> <span class='string val'>&quot;tropo_developer&quot;</span>
+  <span class='api_secret identifier id'>api_secret</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:api_secret</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='string val'>&quot;7xGi0xAqcg3YXw&quot;</span>
   
   <span class='options identifier id'>options</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='lbrace token'>{</span> <span class='symbol val'>:http</span>            <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='create_http identifier id'>create_http</span><span class='lparen token'>(</span><span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='base_uri identifier id'>base_uri</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='comma token'>,</span>
-                   <span class='symbol val'>:api_credentials</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='dstring node'>&quot;?apikey=#{options[:key]}&amp;apisecret=#{options[:secret]}&amp;apioutputformat=API_FORMAT_JSON&quot;</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+                   <span class='symbol val'>:api_credentials</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='dstring node'>&quot;?apikey=#{api_key}&amp;apisecret=#{api_secret}&amp;apioutputformat=API_FORMAT_JSON&quot;</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:api_credentials</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:api_credentials</span><span class='rbrack token'>]</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;&amp;usertoken=#{get_user_token(options)}&quot;</span>
   
   <span class='@fax_job ivar id'>@fax_job</span> <span class='assign token'>=</span> <span class='FaxJob constant id'>FaxJob</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='options identifier id'>options</span>
@@ -342,12 +346,12 @@ FaxJob object</p>
       <pre class="lines">
 
 
-751
-752
-753</pre>
+753
+754
+755</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 751</span>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 753</span>
 
 <span class='def def kw'>def</span> <span class='method_missing identifier id'>method_missing</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='rparen token'>)</span>
   <span class='@fax_job ivar id'>@fax_job</span><span class='dot token'>.</span><span class='send identifier id'>send</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='rparen token'>)</span>
@@ -426,14 +430,14 @@ FaxJob object</p>
       <pre class="lines">
 
 
-796
-797
 798
 799
-800</pre>
+800
+801
+802</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 796</span>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 798</span>
 
 <span class='def def kw'>def</span> <span class='create_http identifier id'>create_http</span><span class='lparen token'>(</span><span class='base_uri identifier id'>base_uri</span><span class='rparen token'>)</span>
   <span class='http identifier id'>http</span> <span class='assign token'>=</span> <span class='Net constant id'>Net</span><span class='colon2 op'>::</span><span class='HTTP constant id'>HTTP</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='base_uri identifier id'>base_uri</span><span class='dot token'>.</span><span class='host identifier id'>host</span><span class='comma token'>,</span> <span class='base_uri identifier id'>base_uri</span><span class='dot token'>.</span><span class='port identifier id'>port</span><span class='rparen token'>)</span>
@@ -511,17 +515,17 @@ FaxJob object</p>
       <pre class="lines">
 
 
-766
-767
 768
 769
 770
 771
 772
-773</pre>
+773
+774
+775</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 766</span>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 768</span>
 
 <span class='def def kw'>def</span> <span class='get_user_token identifier id'>get_user_token</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='verify_user identifier id'>verify_user</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span>
@@ -602,14 +606,14 @@ FaxJob object</p>
       <pre class="lines">
 
 
-784
-785
 786
 787
-788</pre>
+788
+789
+790</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 784</span>
+      <pre class="code"><span class="info file"># File 'lib/pamfaxr/pamfaxr.rb', line 786</span>
 
 <span class='def def kw'>def</span> <span class='verify_user identifier id'>verify_user</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;/Session/VerifyUser/#{options[:api_credentials]}&amp;username=#{options[:username]}&amp;password=#{options[:password]}&quot;</span>
@@ -627,7 +631,7 @@ FaxJob object</p>
 </div>
     
     <div id="footer">
-  Generated on Thu Feb 10 10:14:09 2011 by 
+  Generated on Thu Feb 10 12:24:50 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.8.7).
 </div>

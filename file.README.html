@@ -60,32 +60,37 @@
 <h2 id='example'>Example</h2>
 
 <pre class="code"><span class='comment val'># Create a new PamFaxr object</span>
-<span class='pamfaxr identifier id'>pamfaxr</span> <span class='assign token'>=</span> <span class='PamFaxr constant id'>PamFaxr</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:key</span>      <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_key'</span><span class='comma token'>,</span> 
-                      <span class='symbol val'>:secret</span>   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_secret'</span><span class='comma token'>,</span> 
-                      <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_username'</span><span class='comma token'>,</span> 
+
+<span class='pamfaxr identifier id'>pamfaxr</span> <span class='assign token'>=</span> <span class='PamFaxr constant id'>PamFaxr</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_username'</span><span class='comma token'>,</span> 
                       <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_password'</span>
+
 <span class='comment val'># Create a new FaxJob</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='create_fax_job identifier id'>create_fax_job</span>
+
 <span class='comment val'># Add the cover sheet</span>
 <span class='covers identifier id'>covers</span> <span class='assign token'>=</span> <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='list_available_covers identifier id'>list_available_covers</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='set_cover identifier id'>set_cover</span><span class='lparen token'>(</span><span class='covers identifier id'>covers</span><span class='lbrack token'>[</span><span class='string val'>'Covers'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'content'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'id'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Foobar is here!'</span><span class='rparen token'>)</span>
+
 <span class='comment val'># Add files</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_remote_file identifier id'>add_remote_file</span><span class='lparen token'>(</span><span class='string val'>'https://s3.amazonaws.com/pamfax-test/Tropo.pdf'</span><span class='rparen token'>)</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_file identifier id'>add_file</span><span class='lparen token'>(</span><span class='string val'>'examples/Tropo.pdf'</span><span class='rparen token'>)</span>
+
 <span class='comment val'># Add a recipient</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_recipient identifier id'>add_recipient</span><span class='lparen token'>(</span><span class='string val'>'+14155551212'</span><span class='rparen token'>)</span>
+
 <span class='comment val'># Loop until the fax is ready to send</span>
 <span class='loop identifier id'>loop</span> <span class='do do kw'>do</span>
   <span class='fax_state identifier id'>fax_state</span> <span class='assign token'>=</span> <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='get_state identifier id'>get_state</span>
   <span class='break break kw'>break</span> <span class='if if_mod kw'>if</span> <span class='fax_state identifier id'>fax_state</span><span class='lbrack token'>[</span><span class='string val'>'FaxContainer'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'state'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'ready_to_send'</span>
   <span class='sleep identifier id'>sleep</span> <span class='integer val'>5</span>
 <span class='end end kw'>end</span>
+
 <span class='comment val'># Send the fax</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='send_fax identifier id'>send_fax</span>
 </pre></div></div>
     
     <div id="footer">
-  Generated on Thu Feb 10 10:14:08 2011 by 
+  Generated on Thu Feb 10 12:24:49 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.8.7).
 </div>
