@@ -133,7 +133,7 @@ class PamFaxr
     # @return [Hash] the result of the request to add a file
     #
     # @example adding a remote file
-    #   pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/R-intro.pdf')
+    #   pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/Tropo.pdf')
     #
     #   returns:
     #
@@ -144,7 +144,7 @@ class PamFaxr
     #         "message" => ""
     #     },
     #     "FaxContainerFile" => {
-    #               "name" => "R-intro.pdf",
+    #               "name" => "Tropo.pdf",
     #         "file_order" => 0,
     #                "ext" => "pdf",
     #          "file_uuid" => "CwPx31xjl9k7Cp",
@@ -288,7 +288,7 @@ class PamFaxr
     #            "type" => "list",
     #         "content" => [
     #             [0] {
-    #                       "name" => "R-intro.pdf",
+    #                       "name" => "Tropo.pdf",
     #                       "size" => 646768,
     #                  "extension" => "pdf",
     #                       "uuid" => "CwPx31xjl9k7Cp",
@@ -784,12 +784,7 @@ class PamFaxr
   def verify_user(options={})
     resource = "/Session/VerifyUser/#{options[:api_credentials]}&username=#{options[:username]}&password=#{options[:password]}"
     body = options[:http].get(resource).body 
-    begin
-      JSON.parse body
-    rescue => error
-      p error
-      p body
-    end
+    JSON.parse body
   end
   
   ##
@@ -799,7 +794,6 @@ class PamFaxr
   #
   # @return [Object] an instantiated net/http object that is ssl enabled
   def create_http(base_uri)
-    p base_uri
     http = Net::HTTP.new(base_uri.host, base_uri.port)
     http.use_ssl = true
     http

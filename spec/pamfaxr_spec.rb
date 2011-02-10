@@ -178,7 +178,7 @@ describe "PamFaxr" do
                       "message" => ""
                   },
                   "FaxContainerFile" => {
-                            "name" => "R-intro.pdf",
+                            "name" => "Tropo.pdf",
                       "file_order" => 0,
                              "ext" => "pdf",
                        "file_uuid" => "OQskZYr9D0MANw",
@@ -194,7 +194,7 @@ describe "PamFaxr" do
                                   "message" => ""
                               },
                               "FaxContainerFile" => {
-                                        "name" => "R-intro.pdf",
+                                        "name" => "Tropo.pdf",
                                   "file_order" => 0,
                                          "ext" => "pdf",
                                    "file_uuid" => "OuH2JbbGKhDp8o",
@@ -221,7 +221,7 @@ describe "PamFaxr" do
                              "type" => "list",
                           "content" => [
                                   {
-                                        "name" => "R-intro.pdf",
+                                        "name" => "Tropo.pdf",
                                         "size" => 646768,
                                    "extension" => "pdf",
                                         "uuid" => "aMzeebWS9O8GKz",
@@ -231,7 +231,7 @@ describe "PamFaxr" do
                                      "created" => "2011-01-17 14:55:57"
                               },
                                   {
-                                        "name" => "examples/R-intro.pdf",
+                                        "name" => "examples/Tropo.pdf",
                                         "size" => 646768,
                                    "extension" => "pdf",
                                         "uuid" => "BVMJzRmu1zAlSZ",
@@ -357,7 +357,7 @@ describe "PamFaxr" do
                          :status => ["200", "OK"])
 
    FakeWeb.register_uri(:get, 
-                        "https://sandbox-api.pamfax.biz/FaxJob/AddRemoteFile?apikey=name&apisecret=abd123&apioutputformat=API_FORMAT_JSON&usertoken=m3cv0d9gqb69taajcu76nqv5eccht76t&url=https://s3.amazonaws.com/pamfax-test/R-intro.pdf",
+                        "https://sandbox-api.pamfax.biz/FaxJob/AddRemoteFile?apikey=name&apisecret=abd123&apioutputformat=API_FORMAT_JSON&usertoken=m3cv0d9gqb69taajcu76nqv5eccht76t&url=https://s3.amazonaws.com/pamfax-test/Tropo.pdf",
                         :body => @page.to_json,
                         :content_type => "application/json",
                         :status => ["200", "OK"])
@@ -452,8 +452,8 @@ describe "PamFaxr" do
   end
   
   it "should add a file to the fax job" do
-    @pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/R-intro.pdf').should == @page
-    @pamfaxr.add_file('examples/R-intro.pdf').should == @local_file_upload
+    @pamfaxr.add_remote_file('https://s3.amazonaws.com/pamfax-test/Tropo.pdf').should == @page
+    @pamfaxr.add_file('examples/Tropo.pdf').should == @local_file_upload
   end
   
   it "should list the available fax cover templates" do
