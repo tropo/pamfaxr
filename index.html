@@ -41,15 +41,15 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h1>PamFaxr</h1>
+    <div id="content"><div id='filecontents'><h1 id='pamfaxr'>PamFaxr</h1>
 
-<p>Ruby library for sending faxes via the <a href="http://pamfax.com">PamFax</a> Simple API.</p>
+<p>Ruby library for sending faxes via the <a href='http://www.pamfax.biz/en/partners/tropo/'>PamFax</a> Simple API.</p>
 
-<h2>Overview</h2>
+<h2 id='overview'>Overview</h2>
 
-<p>You may send faxes using the PamFax API. See the <a href="http://www.pamfax.biz/en/extensions/developers/">PamFax Developer</a> page for more details and how to get your developer key.</p>
+<p>You may send faxes using the PamFax API. See the <a href='http://www.pamfax.biz/en/partners/tropo/'>PamFax Developer</a> page for more details and how to get your developer key.</p>
 
-<h2>Requirements</h2>
+<h2 id='requirements'>Requirements</h2>
 
 <p>Requires these gems, also in the Gemfile:</p>
 
@@ -57,11 +57,10 @@
 <span class='mult op'>*</span> <span class='mime identifier id'>mime</span><span class='minus op'>-</span><span class='types identifier id'>types</span>
 </pre>
 
-<h2>Example</h2>
+<h2 id='example'>Example</h2>
 
 <pre class="code"><span class='comment val'># Create a new PamFaxr object</span>
-<span class='pamfaxr identifier id'>pamfaxr</span> <span class='assign token'>=</span> <span class='PamFaxr constant id'>PamFaxr</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:base_uri</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'https://sandbox-api.pamfax.biz'</span><span class='comma token'>,</span>
-                      <span class='symbol val'>:key</span>      <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_key'</span><span class='comma token'>,</span> 
+<span class='pamfaxr identifier id'>pamfaxr</span> <span class='assign token'>=</span> <span class='PamFaxr constant id'>PamFaxr</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='symbol val'>:key</span>      <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_key'</span><span class='comma token'>,</span> 
                       <span class='symbol val'>:secret</span>   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_api_secret'</span><span class='comma token'>,</span> 
                       <span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_username'</span><span class='comma token'>,</span> 
                       <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'your_password'</span>
@@ -71,8 +70,8 @@
 <span class='covers identifier id'>covers</span> <span class='assign token'>=</span> <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='list_available_covers identifier id'>list_available_covers</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='set_cover identifier id'>set_cover</span><span class='lparen token'>(</span><span class='covers identifier id'>covers</span><span class='lbrack token'>[</span><span class='string val'>'Covers'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'content'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'id'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Foobar is here!'</span><span class='rparen token'>)</span>
 <span class='comment val'># Add files</span>
-<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_remote_file identifier id'>add_remote_file</span><span class='lparen token'>(</span><span class='string val'>'https://s3.amazonaws.com/pamfax-test/R-intro.pdf'</span><span class='rparen token'>)</span>
-<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_file identifier id'>add_file</span><span class='lparen token'>(</span><span class='string val'>'examples/R-intro.pdf'</span><span class='rparen token'>)</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_remote_file identifier id'>add_remote_file</span><span class='lparen token'>(</span><span class='string val'>'https://s3.amazonaws.com/pamfax-test/Tropo.pdf'</span><span class='rparen token'>)</span>
+<span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_file identifier id'>add_file</span><span class='lparen token'>(</span><span class='string val'>'examples/Tropo.pdf'</span><span class='rparen token'>)</span>
 <span class='comment val'># Add a recipient</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='add_recipient identifier id'>add_recipient</span><span class='lparen token'>(</span><span class='string val'>'+14155551212'</span><span class='rparen token'>)</span>
 <span class='comment val'># Loop until the fax is ready to send</span>
@@ -83,11 +82,10 @@
 <span class='end end kw'>end</span>
 <span class='comment val'># Send the fax</span>
 <span class='pamfaxr identifier id'>pamfaxr</span><span class='dot token'>.</span><span class='send_fax identifier id'>send_fax</span>
-</pre>
-</div></div>
+</pre></div></div>
     
     <div id="footer">
-  Generated on Wed Jan 26 15:14:17 2011 by 
+  Generated on Thu Feb 10 10:14:08 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.8.7).
 </div>
