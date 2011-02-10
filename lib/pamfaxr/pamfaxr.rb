@@ -733,9 +733,6 @@ class PamFaxr
   # @option params [optional, String] :api_secret the PamFax API secret you have been assigned
   #
   # @return [Object] the instantiated FaxJob class
-  #
-  # @example create a new PamFax object
-  #   pamfaxr = PamFax.new({ :key => 'your_api_key', :secret => 'your_api_secret' })
   def initialize(options={})
     base_uri   = options[:base_uri]   || "https://api.pamfax.biz"
     api_key    = options[:api_key]    || "tropo_developer"

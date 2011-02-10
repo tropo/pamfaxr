@@ -17,8 +17,6 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".bundle/config",
-    ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE",
