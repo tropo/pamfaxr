@@ -688,7 +688,9 @@ class PamFaxr
     # @return [Boolean] true if a file is still in the converting process
     def converting?(fax_state)
       converting = false
-      fax_state['Files']['content'].each { |file| converting = true if file['state'] == '' || file['state'] == 'converting' }
+      if fax_state['Files'].include? 'content'
+	fax_state['Files']['content'].each { |file| converting = true if file['state'] == '' || file['state'] == 'converting' }
+      end
       converting
     end
     
