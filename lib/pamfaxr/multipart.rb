@@ -3,6 +3,7 @@
 #
 # Author:: Cody Brimhall <mailto:cbrimhall@ucdavis.edu>
 # Created:: 22 Feb 2008
+# Licensed under the terms of the WTFPL
 
 module Multipart
   VERSION = "1.0.0" unless const_defined?(:VERSION)
