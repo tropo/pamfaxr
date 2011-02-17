@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{pamfaxr}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jason Goecke"]
-  s.date = %q{2011-02-10}
+  s.date = %q{2011-02-17}
   s.description = %q{Ruby library for the FaxJob portion of the PamFax API.}
   s.email = %q{jsgoecke@voxeo.com}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "examples/Tropo.pdf",
     "examples/example.rb",
+    "examples/hello_pamfax.rb",
     "lib/pamfaxr.rb",
     "lib/pamfaxr/multipart.rb",
     "lib/pamfaxr/pamfaxr.rb",
@@ -41,6 +42,7 @@ Gem::Specification.new do |s|
   s.summary = %q{Ruby library for the PamFax API.}
   s.test_files = [
     "examples/example.rb",
+    "examples/hello_pamfax.rb",
     "spec/pamfaxr_spec.rb",
     "spec/spec_helper.rb"
   ]
