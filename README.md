@@ -15,6 +15,13 @@ Requires these gems, also in the Gemfile:
 
 	* json
 	* mime-types
+	
+Builds native extensions, the Ruby development package is required. On Ubuntu you can use "sudo apt-get install ruby-dev" to install.
+
+Installation
+------------
+
+gem install pamfaxr
 
 Example
 -------
